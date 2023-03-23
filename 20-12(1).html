@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #div1{
+            background: lightblue;
+            height: 100px;
+            width: 100px;
+            position:fixed;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="click" id="btn">
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                var div = $("div");
+                div.animate({height: '300px', opactity: '0.4'},"slow");
+                div.animate({width:'300px',opactity: '0.8'},"slow")
+                div.animate({height:'100px',opactity:'0.4'},"slow")
+                div.animate({width:'100px',opacity:'0.8'},"slow")
+
+            });
+        });
+    </script>
+    <div id="div1"></div>
+
+    <!-- <script src="jquery.js"></script>
+
+    </SCRIPT>
+    <p id="p1"> This is aptech</p>
+    <br>
+    <input type="button" value="click" id="btn">
+    <input type="button" value="click" id="btn2">
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#p1").replaceWith("<p> This is aptech NK</p>");
+            });
+        });
+        $(document).ready(function(){
+            $("#btn2").click(function(){
+                var a=prompt("enter some text");
+                $("#p1").replaceWith("<p>" + a + "</p>" );
+            });
+        });
+    </script> -->
+</body>
+</html>

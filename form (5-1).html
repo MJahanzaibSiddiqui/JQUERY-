@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css"> 
+    <script src="jquery.js"></script>
+    <script src="dist/jquery.validate.js"></script>
+    <script src="dist/jquery.validate.min.js"></script>
+    <title> form work</title>
+
+</head>
+<body>
+    <div class="container">
+        <h2 class="heading1"> registration form </h2>
+        <form action="" name="registration ">
+
+        <label for="first name">first name</label>
+        <input type="text" name="firstname" id="firstname"
+        placeholder="enter first name"/>
+
+        <label for="last name">last name</label>
+        <input type="text" name="lastname" id="lastname"
+        placeholder="enter last name"/>
+
+        <label for="email">email</label>
+        <input type="text" name="email" id="email"
+        placeholder="enter email address"/>
+
+        <label for="password">password</label>
+        <input type="text" name="password" id="password"
+        placeholder="enter password"/>
+
+        <button type="submit">register</button>
+    </form>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("form[name='registration']").validate({
+                //specify validation rules
+        rules:{
+            firstname: "required",
+            lastname: "required",
+            email:{
+                  required: true,
+                  email: true,
+
+            },
+            password:{
+                required: true,
+                minilenght: 8
+            }
+        },
+        messages: {
+            firstname: "please enter your first name",
+            lastname: "please enter your last name",
+            password:{
+                required: "please provide a password",
+                minilenght:"your password must be at least 8 characters long"
+            },
+            email: "please enter a valid email address"
+        },
+        submithandler: function(form){
+            form.submit();
+        }
+     });
+ });
+    
+
+    </script>
+
+
+
+
+</body>
+</html>

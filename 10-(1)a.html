@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="jquery-ui-1.13.2/jquery-ui.min.css"></script>
+    <script src="jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <title>10-(1)</title>
+</head>
+<body>
+    <script src="jquery.js"></script>
+
+    <h1 style="color:blue">control group </h1>
+    <div id ="my_games_control_groups">
+             <label for ="radio_1">men</label>
+            <input type="radio" name="type" id="radio_1">
+            <label for ="radio_2">women</label>
+            <input type="radio" name="type" id="radio_2">
+            <select>
+                <option>cricket</option>
+                <option>tennis</option>
+                <option>hockey</option>
+                <option>football</option>
+                
+            </select>
+            <label for="official">official</label>
+            <input type="checkbox"
+                   name="official"
+                   id="official">
+            <button id="apply">Apply</button>       
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#my_games_control_groups").controlgroup();
+        });
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #panel,#flip{
+            text-align: center;
+            background-color: #e5eece;
+            border: solid 1px#c3c3c3;
+            
+
+        }
+        #flip{
+            padding: 5px;
+        }
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+   
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });             
+    </script>
+    <div id="flip">click ti slide the panel down or up</div>
+    <div id="panel">welcome to jquery</div>
+    
+</body>
+</html>
+
